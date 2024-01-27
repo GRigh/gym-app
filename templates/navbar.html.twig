@@ -1,0 +1,18 @@
+<ul class="nav flex-column">
+  <li class="nav-item active">
+    <a class="nav-link" href="#"> <i class="fas fa-home"></i> Dashboard </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"> <i class="fas fa-user"></i> Profilo </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"> <i class="fas fa-cogs"></i> Alimenti </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+      {% if app.user %} Benvenuto, {{ app.user.username }}! {% endif %}
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </a>
+  </li>
+  <!-- Add more items as needed -->
+</ul>

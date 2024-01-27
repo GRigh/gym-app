@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dettagli Alimento{% endblock %}
+
+{% block body %}
+    <h1>Dettagli Alimento</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <td>{{ alimento.id }}</td>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <td>{{ alimento.nome }}</td>
+            </tr>
+            <tr>
+                <th>Calorie</th>
+                <td>{{ alimento.calorie }}</td>
+            </tr>
+            <tr>
+                <th>Proteine</th>
+                <td>{{ alimento.proteine }}</td>
+            </tr>
+            <tr>
+                <th>Grassi</th>
+                <td>{{ alimento.grassi }}</td>
+            </tr>
+            <tr>
+                <th>Carboidrati</th>
+                <td>{{ alimento.carboidrati }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('alimento_index') }}">Indietro alla lista</a>
+    <a href="{{ path('alimento_edit', {'id': alimento.id}) }}">Modifica</a>
+    <a href="{{ path('alimento_delete', {'id': alimento.id}) }}" onclick="return confirm('Sei sicuro di voler eliminare questo alimento?')">Elimina</a>
+{% endblock %}

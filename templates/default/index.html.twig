@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Aggiungi i tuoi stili personalizzati qui */
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .sidebar {
+            background-color: #e80033;
+            color: #fff;
+            padding-top: 3.5rem;
+        }
+
+        .sidebar a {
+            color: #fff;
+        }
+
+        .sidebar a.active {
+            background-color: #fdbb30;
+        }
+
+        .main-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+        
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card" style="background-color: #ed8b00; color: #fff;">
+                            <div class="card-body">
+                                <h5 class="card-title">Sezione 1</h5>
+                                <p class="card-text">Contenuto della sezione 1.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card" style="background-color: #f15d22; color: #fff;">
+                            <div class="card-body">
+                                <h5 class="card-title">Sezione 2</h5>
+                                <p class="card-text">Contenuto della sezione 2.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card" style="background-color: #bf0d3e; color: #fff;">
+                            <div class="card-body">
+                                <h5 class="card-title">Sezione 3</h5>
+                                <p class="card-text">Contenuto della sezione 3.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+{% endblock %}

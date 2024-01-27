@@ -1,0 +1,11 @@
+{{ form_start(form) }}
+
+{{ form_row(form.nome) }}
+{{ form_row(form.calorie) }}
+{{ form_row(form.proteine) }}
+{{ form_row(form.grassi) }}
+{{ form_row(form.carboidrati) }}
+
+<button type="submit">{{ button_label ?? 'Salva' }}</button>
+
+{{ form_end(form) }}
